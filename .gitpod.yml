@@ -1,0 +1,11 @@
+tasks:
+  - name: Docker-compose
+    command: cd Docker && docker-compose up -d && gp sync-done prev
+
+  - name: YottaDB-terminal
+    command: gp sync-await prev && docker exec -it yottadb /opt/yottadb/current/ydb
+    openMode: split-right
+ 
+  - name: nodejs-terminal
+    command:  gp sync-await prev && docker exec -it node /bin/bash -c "cd /home/node && bash"
+    openMode: split-right

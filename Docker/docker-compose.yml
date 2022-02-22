@@ -1,0 +1,33 @@
+#
+#       AUTHOR - Raman Sailopal
+#
+#       docker compose yml file for the YottaDB-Dashboard stack
+#
+version: "2"
+services:
+ yottadb:
+   hostname: yottadb
+   container_name: yottadb
+   image: docker.io/ramb0/yottadb-gateway
+   networks:
+      - yottanet
+   ports:
+      - 7041:7041
+   mem_limit: 1G
+
+
+ node:
+   image: docker.io/ramb0/yottadb-nodejs-client
+   hostname: node
+   container_name: node
+   volumes:
+      - ../node:/home/node
+      - ../yotta:/home/yotta
+   entrypoint: [ "/bin/bash", "-c", "cd /home/node && yarn add mg-dbx" ] 
+   networks:
+      - yottanet
+
+networks:
+    yottanet:
+volumes:
+    app-volume:
