@@ -6,7 +6,7 @@ Utilises M Gateway integration engine and M Gateway dbx
 
 ![Alt text](yotta-node.webp?raw=true "Gitpod View")
 
- # Gitpod Demo
+ # Gitpod
  
 1) Create a free/paid Gitpod account - https://www.gitpod.io/
 2) Log into the account
