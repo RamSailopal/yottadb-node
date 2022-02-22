@@ -23,7 +23,7 @@ services:
    volumes:
       - ../node:/home/node
       - ../yotta:/home/yotta
-   entrypoint: [ "/bin/bash", "-c", "cd /home/node && yarn add mg-dbx" ] 
+   entrypoint: [ "/bin/bash", "-c", "cd /home/node && yarn add mg-dbx && tail -f /dev/null" ] 
    networks:
       - yottanet
 
