@@ -6,7 +6,7 @@ Utilises M Gateway integration engine and M Gateway dbx
 
 # References
 
-M Gateway Intergration engine - https://github.com/chrisemunt/mgsi
+M** Gateway Intergration engine** - https://github.com/chrisemunt/mgsi
 
-mg-dbx - https://github.com/chrisemunt/mg-dbx
+**mg-dbx** - https://github.com/chrisemunt/mg-dbx
 
